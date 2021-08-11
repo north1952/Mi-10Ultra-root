@@ -1,12 +1,12 @@
 @ECHO OFF
 
-set object_name=ÐÞ²¹boot·½Ê½Ò»¼üË¢ÈëÃæ¾ß
+set object_name=ä¿®è¡¥bootæ–¹å¼ä¸€é”®åˆ·å…¥é¢å…·èŽ·å–root
 set device_name=Xiaomi 10 Ultra
-set rec_name=Ãæ¾ßÒ»¼üË¢Èë
-set rec_ver=Ð¡Ã×10U 12.5.3.0 ÎÈ¶¨°æ
-set rec_auth=¿ÉÀÖ±ùºü
-set rec_team=¿á°²
-set rec_date=2021.06.11
+set rec_name=é¢å…·ä¸€é”®åˆ·å…¥
+set rec_ver=å°ç±³10U 12.5.4.0 ç¨³å®šç‰ˆ MIUI 12.5 å¢žå¼ºç‰ˆ
+set rec_auth=å¯ä¹å†°ç‹
+set rec_team=é…·å®‰
+set rec_date=2021.08.11
 set magisk_img=magisk_patched.img
 
 TITLE %device_name% %object_name%--by %rec_auth%
@@ -19,18 +19,18 @@ CLS
 ECHO.
 ECHO.         %device_name% %object_name%
 ECHO.***********************************************
-ECHO.              »ù±¾ÐÅÏ¢
+ECHO.              åŸºæœ¬ä¿¡æ¯
 ECHO.
-ECHO.              Ãû³Æ £º%rec_name%
-ECHO.              °æ±¾ £º%rec_ver%
-ECHO.              ÊÊÅä»úÐÍ£º%device_name%
-ECHO.              ½Å±¾×÷Õß£º%rec_auth%
-ECHO.              Ê×·¢ÂÛÌ³£º%rec_team%
-ECHO.              ±àÒëÊ±¼ä£º%rec_date%
-ECHO.     £¨Ö§³Ö¿ª»ú×´Ì¬Ë¢ÈëºÍfastbootÄ£Ê½Ë¢Èë£©    
+ECHO.              åç§° ï¼š%rec_name%
+ECHO.              ç‰ˆæœ¬ ï¼š%rec_ver%
+ECHO.              é€‚é…æœºåž‹ï¼š%device_name%
+ECHO.              è„šæœ¬ä½œè€…ï¼š%rec_auth%
+ECHO.              é¦–å‘è®ºå›ï¼š%rec_team%
+ECHO.              ç¼–è¯‘æ—¶é—´ï¼š%rec_date%
+ECHO.     ï¼ˆæ”¯æŒå¼€æœºçŠ¶æ€åˆ·å…¥å’Œfastbootæ¨¡å¼åˆ·å…¥ï¼‰    
 ECHO.***********************************************
 ECHO.
-ECHO.°´ÈÎÒâ¼ü¼ÌÐø...
+ECHO.æŒ‰ä»»æ„é”®ç»§ç»­...
 pause>nul
 
 :MENU
@@ -38,28 +38,28 @@ CLS
 ECHO.
 ECHO.         %device_name% %object_name%
 ECHO.***********************************************
-ECHO.             ÄúÊÖ»úµÄµ±Ç°×´Ì¬£º
+ECHO.             æ‚¨æ‰‹æœºçš„å½“å‰çŠ¶æ€ï¼š
 ECHO.
-ECHO.              1.¿ª»ú×´Ì¬
+ECHO.              1.å¼€æœºçŠ¶æ€
 ECHO.
-ECHO.              2.fastbootÄ£Ê½
+ECHO.              2.fastbootæ¨¡å¼
 ECHO.
-ECHO.              3.ÆäËû×´Ì¬
+ECHO.              3.å…¶ä»–çŠ¶æ€
 ECHO.
-ECHO.              4.»Ö¸´Ô­°æboot
+ECHO.              4.æ¢å¤åŽŸç‰ˆboot
 ECHO.
 ECHO.
 ECHO.***********************************************
 ECHO.
 set choice=
-set /p choice=ÇëÖ±½ÓÊäÈë¶ÔÓ¦Êý×Ö»Ø³µ£º
+set /p choice=è¯·ç›´æŽ¥è¾“å…¥å¯¹åº”æ•°å­—å›žè½¦ï¼š
 if not "%choice%"=="" set choice=%choice:~0,1%
 if /i "%choice%"=="1" goto IN_SYSTEM
 if /i "%choice%"=="2" goto FASTBOOT_MODE
 if /i "%choice%"=="3" goto OTHERS
 if /i "%choice%"=="4" goto RECOVER_BOOT
 ECHO.
-ECHO.ÊäÈëÎÞÐ§£¬ÇëÖØÐÂÊäÈë...
+ECHO.è¾“å…¥æ— æ•ˆï¼Œè¯·é‡æ–°è¾“å…¥...
 timeout /t 2 /nobreak >NUL
 ECHO.
 goto MENU
@@ -70,13 +70,13 @@ CLS
 ECHO.
 ECHO.         %device_name% %object_name%
 ECHO.***********************************************
-ECHO.             ÇëÏÈ½«ÊÖ»ú´¦ÓÚ
+ECHO.             è¯·å…ˆå°†æ‰‹æœºå¤„äºŽ
 ECHO.
-ECHO.               ¡¾¿ª»ú×´Ì¬¡¿
-ECHO.                  »òÕß
-ECHO.             ¡¾fastbootÄ£Ê½¡¿
+ECHO.               ã€å¼€æœºçŠ¶æ€ã€‘
+ECHO.                  æˆ–è€…
+ECHO.             ã€fastbootæ¨¡å¼ã€‘
 ECHO.
-ECHO.£¨°´ÈÎÒâ¼ü·µ»ØÉÏ¼¶²Ëµ¥£¬ÈôÎÞ²Ù×÷Ôò6Ãëºó×Ô¶¯·µ»Ø£©
+ECHO.ï¼ˆæŒ‰ä»»æ„é”®è¿”å›žä¸Šçº§èœå•ï¼Œè‹¥æ— æ“ä½œåˆ™6ç§’åŽè‡ªåŠ¨è¿”å›žï¼‰
 ECHO.***********************************************
 ECHO.
 timeout /t 6 >nul
@@ -89,23 +89,23 @@ CLS
 ECHO.
 ECHO.         %device_name% %object_name%
 ECHO.***********************************************
-ECHO.          ÇëÄú½«ÊÖ»úÕýÈ·Á¬½Óµ½µçÄÔ£º
+ECHO.          è¯·æ‚¨å°†æ‰‹æœºæ­£ç¡®è¿žæŽ¥åˆ°ç”µè„‘ï¼š
 ECHO.
-ECHO.            ÇëÈ·±££º
-ECHO.      ¡¾1.ÊÖ»úbootloaderÎ´Ëø¡¿
-ECHO.      ¡¾2.ÊÖ»ú´¦ÓÚ¿ª»ú×´Ì¬¡¿
-ECHO.      ¡¾3.ÊÖ»ú¿ªÆôUSBµ÷ÊÔ¡¿
-ECHO.      ¡¾4.µçÄÔÉÏÒÑ¾­ÕýÈ·°²×°Çý¶¯¡¿
-ECHO.      ¡¾5.ÊÖ»úÌáÊ¾USBµ÷ÊÔÊÚÈ¨Ê±¹´Ñ¡Ê¼ÖÕµã»÷ÊÚÈ¨¡¿
+ECHO.            è¯·ç¡®ä¿ï¼š
+ECHO.      ã€1.æ‰‹æœºbootloaderæœªé”ã€‘
+ECHO.      ã€2.æ‰‹æœºå¤„äºŽå¼€æœºçŠ¶æ€ã€‘
+ECHO.      ã€3.æ‰‹æœºå¼€å¯USBè°ƒè¯•ã€‘
+ECHO.      ã€4.ç”µè„‘ä¸Šå·²ç»æ­£ç¡®å®‰è£…é©±åŠ¨ã€‘
+ECHO.      ã€5.æ‰‹æœºæç¤ºUSBè°ƒè¯•æŽˆæƒæ—¶å‹¾é€‰å§‹ç»ˆç‚¹å‡»æŽˆæƒã€‘
 ECHO.
-ECHO.            £¨°´ÏÂÈÎÒâ¼ü¼ÌÐø£©
+ECHO.            ï¼ˆæŒ‰ä¸‹ä»»æ„é”®ç»§ç»­ï¼‰
 ECHO.***********************************************
 ECHO.
 pause>nul
-ECHO.        ÕýÔÚ¼ì²éÉè±¸ÊÇ·ñÕý³£Á¬½Ó...
+ECHO.        æ­£åœ¨æ£€æŸ¥è®¾å¤‡æ˜¯å¦æ­£å¸¸è¿žæŽ¥...
 ECHO.
-ECHO.   £¨Èô³¤Ê±¼äÍ£ÁôÔÚ´Ë½çÃæ£¬Çë¼ì²éÉÏÊö¼¸Ïî£©
-ECHO.           £¨²¢ÖØÆô¸Ã¹¤¾ß£©
+ECHO.   ï¼ˆè‹¥é•¿æ—¶é—´åœç•™åœ¨æ­¤ç•Œé¢ï¼Œè¯·æ£€æŸ¥ä¸Šè¿°å‡ é¡¹ï¼‰
+ECHO.           ï¼ˆå¹¶é‡å¯è¯¥å·¥å…·ï¼‰
 ECHO.***********************************************
 ECHO.
 timeout /t 2 /nobreak >NUL
@@ -117,12 +117,12 @@ ECHO.         %device_name% %object_name%
 ECHO.***********************************************
 ECHO.
 ECHO.
-ECHO.             ÊÖ»úÖØÆôÖÐ...
+ECHO.             æ‰‹æœºé‡å¯ä¸­...
 ECHO.
 ECHO.
 ECHO.***********************************************
 ECHO.
-ECHO.   £¨Èô³¤Ê±¼äÍ£ÁôÔÚ´Ë½çÃæ£¬ÇëÖØÆô¸Ã¹¤¾ß£©
+ECHO.   ï¼ˆè‹¥é•¿æ—¶é—´åœç•™åœ¨æ­¤ç•Œé¢ï¼Œè¯·é‡å¯è¯¥å·¥å…·ï¼‰
 ECHO.
 adb.exe reboot bootloader >NUL 2>NUL
 timeout /t 3 /nobreak >NUL
@@ -134,14 +134,14 @@ CLS
 ECHO.
 ECHO.         %device_name% %object_name%
 ECHO.***********************************************
-ECHO.          ÇëÄú½«ÊÖ»úÕýÈ·Á¬½Óµ½µçÄÔ£º
+ECHO.          è¯·æ‚¨å°†æ‰‹æœºæ­£ç¡®è¿žæŽ¥åˆ°ç”µè„‘ï¼š
 ECHO.
-ECHO.          ÇëÈ·±££º
-ECHO.        ¡¾1.ÊÖ»úbootloaderÎ´Ëø¡¿
-ECHO.        ¡¾2.ÊÖ»ú´¦ÓÚfastbootÄ£Ê½¡¿
-ECHO.        ¡¾3.µçÄÔÉÏÒÑ¾­ÕýÈ·°²×°Çý¶¯¡¿
+ECHO.          è¯·ç¡®ä¿ï¼š
+ECHO.        ã€1.æ‰‹æœºbootloaderæœªé”ã€‘
+ECHO.        ã€2.æ‰‹æœºå¤„äºŽfastbootæ¨¡å¼ã€‘
+ECHO.        ã€3.ç”µè„‘ä¸Šå·²ç»æ­£ç¡®å®‰è£…é©±åŠ¨ã€‘
 ECHO.
-ECHO.            £¨°´ÏÂÈÎÒâ¼ü¼ÌÐø£©
+ECHO.            ï¼ˆæŒ‰ä¸‹ä»»æ„é”®ç»§ç»­ï¼‰
 ECHO.***********************************************
 ECHO.
 pause>nul
@@ -152,14 +152,14 @@ CLS
 ECHO.
 ECHO.         %device_name% %object_name%
 ECHO.***********************************************
-ECHO.          ÇëÄú½«ÊÖ»úÕýÈ·Á¬½Óµ½µçÄÔ£º
+ECHO.          è¯·æ‚¨å°†æ‰‹æœºæ­£ç¡®è¿žæŽ¥åˆ°ç”µè„‘ï¼š
 ECHO.
-ECHO.          ÇëÈ·±££º
-ECHO.        ¡¾1.ÊÖ»úbootloaderÎ´Ëø¡¿
-ECHO.        ¡¾2.ÊÖ»ú´¦ÓÚfastbootÄ£Ê½¡¿
-ECHO.        ¡¾3.µçÄÔÉÏÒÑ¾­ÕýÈ·°²×°Çý¶¯¡¿
+ECHO.          è¯·ç¡®ä¿ï¼š
+ECHO.        ã€1.æ‰‹æœºbootloaderæœªé”ã€‘
+ECHO.        ã€2.æ‰‹æœºå¤„äºŽfastbootæ¨¡å¼ã€‘
+ECHO.        ã€3.ç”µè„‘ä¸Šå·²ç»æ­£ç¡®å®‰è£…é©±åŠ¨ã€‘
 ECHO.
-ECHO.            £¨°´ÏÂÈÎÒâ¼ü¼ÌÐø£©
+ECHO.            ï¼ˆæŒ‰ä¸‹ä»»æ„é”®ç»§ç»­ï¼‰
 ECHO.***********************************************
 ECHO.
 pause>nul
@@ -172,16 +172,16 @@ ECHO.
 ECHO.         %device_name% %object_name%
 ECHO.***********************************************
 ECHO.
-ECHO.          ÕýÔÚ¼ì²éÉè±¸ÊÇ·ñÕý³£Á¬½Ó...
+ECHO.          æ­£åœ¨æ£€æŸ¥è®¾å¤‡æ˜¯å¦æ­£å¸¸è¿žæŽ¥...
 ECHO.
 ECHO.
-ECHO.      £¨Èç¹û³¤Ê±¼äÍ£ÁôÔÚ´Ë½çÃæ£¬Çë¼ì²é£º£©
+ECHO.      ï¼ˆå¦‚æžœé•¿æ—¶é—´åœç•™åœ¨æ­¤ç•Œé¢ï¼Œè¯·æ£€æŸ¥ï¼šï¼‰
 ECHO.
-ECHO.      ¡¾1.USBÏßÊÇ·ñÕýÈ·Á¬½Ó¡¿
-ECHO.      ¡¾2.µçÄÔÇý¶¯ÊÇ·ñÕýÈ·°²×°²¢Ê¶±ð¡¿
-ECHO.      ¡¾3.ÊÖ»úÊÇ·ñ½øÈëfastbootÄ£Ê½¡¿
+ECHO.      ã€1.USBçº¿æ˜¯å¦æ­£ç¡®è¿žæŽ¥ã€‘
+ECHO.      ã€2.ç”µè„‘é©±åŠ¨æ˜¯å¦æ­£ç¡®å®‰è£…å¹¶è¯†åˆ«ã€‘
+ECHO.      ã€3.æ‰‹æœºæ˜¯å¦è¿›å…¥fastbootæ¨¡å¼ã€‘
 ECHO.
-ECHO.             £¨²¢ÖØÆô¸Ã¹¤¾ß£©
+ECHO.             ï¼ˆå¹¶é‡å¯è¯¥å·¥å…·ï¼‰
 ECHO.***********************************************
 timeout /t 2 /nobreak >NUL
 fastboot.exe wait-for-device >NUL 2>NUL
@@ -192,14 +192,14 @@ ECHO.         %device_name% %object_name%
 ECHO.***********************************************
 ECHO.
 ECHO.
-ECHO.               ÕýÔÚË¢Èëboot...
+ECHO.               æ­£åœ¨åˆ·å…¥boot...
 ECHO.
 ECHO.
 ECHO.***********************************************
 ECHO.
-ECHO.      £¨Èô³öÏÖ OKAY Ë¢Èë³É¹¦£¬·ñÔòÊ§°Ü£©
+ECHO.      ï¼ˆè‹¥å‡ºçŽ° OKAY åˆ·å…¥æˆåŠŸï¼Œå¦åˆ™å¤±è´¥ï¼‰
 ECHO.
-ECHO.    £¨Èô³¤Ê±¼äÍ£ÁôÔÚ´Ë½çÃæ£¬ÇëÖØÆô¸Ã¹¤¾ß£©
+ECHO.    ï¼ˆè‹¥é•¿æ—¶é—´åœç•™åœ¨æ­¤ç•Œé¢ï¼Œè¯·é‡å¯è¯¥å·¥å…·ï¼‰
 ECHO.
 fastboot.exe flash boot "%magisk_img%" || goto FLASH_FAILED
 fastboot.exe flash vbmeta vbmeta.img --disable-verity --disable-verification || goto FLASH_FAILED
@@ -210,23 +210,23 @@ goto FLASH_OVER
 
 :FLASH_FAILED
 ECHO.
-ECHO. £¡£¡³ö´í£¡£¡
+ECHO. ï¼ï¼å‡ºé”™ï¼ï¼
 timeout /t 6 /nobreak >NUL
 CLS
 ECHO.
 ECHO.         %device_name% %object_name%
 ECHO.***********************************************
 ECHO.
-ECHO.                   Ë¢ÈëÊ§°Ü£¡
+ECHO.                   åˆ·å…¥å¤±è´¥ï¼
 ECHO.
-ECHO.           1.Çë¼ì²éÊÖ»úÐÍºÅÊÇ·ñÕýÈ·
-ECHO.           2.ÇëÈ·ÈÏfastbootÊÇ·ñÕý³£
-ECHO.           3.½âÑ¹ºóÖØÐÂÔËÐÐ±¾³ÌÐò£¬
-ECHO.             Èô»¹²»³É¹¦£¬ÇëÁªÏµ×÷Õß
+ECHO.           1.è¯·æ£€æŸ¥æ‰‹æœºåž‹å·æ˜¯å¦æ­£ç¡®
+ECHO.           2.è¯·ç¡®è®¤fastbootæ˜¯å¦æ­£å¸¸
+ECHO.           3.è§£åŽ‹åŽé‡æ–°è¿è¡Œæœ¬ç¨‹åºï¼Œ
+ECHO.             è‹¥è¿˜ä¸æˆåŠŸï¼Œè¯·è”ç³»ä½œè€…
 ECHO.
-ECHO.           %rec_auth%¸ÐÐ»ÄúÊ¹ÓÃ±¾¹¤¾ß
+ECHO.           %rec_auth%æ„Ÿè°¢æ‚¨ä½¿ç”¨æœ¬å·¥å…·
 ECHO.
-ECHO.            £¨°´ÈÎÒâ¼üÍË³ö³ÌÐò£©
+ECHO.            ï¼ˆæŒ‰ä»»æ„é”®é€€å‡ºç¨‹åºï¼‰
 ECHO.***********************************************
 ECHO.
 timeout /t 1 /nobreak >NUL
@@ -240,15 +240,15 @@ ECHO.
 ECHO.         %device_name% %object_name%
 ECHO.***********************************************
 ECHO.
-ECHO.                 Ë¢Ð´bootÍê³É
+ECHO.                 åˆ·å†™bootå®Œæˆ
 ECHO.
 ECHO.
-ECHO.                   ÊÖ»ú½«ÖØÆô
+ECHO.                   æ‰‹æœºå°†é‡å¯
 ECHO.
 ECHO.
-ECHO.           %rec_auth%¸ÐÐ»ÄúÊ¹ÓÃ±¾¹¤¾ß
+ECHO.           %rec_auth%æ„Ÿè°¢æ‚¨ä½¿ç”¨æœ¬å·¥å…·
 ECHO.
-ECHO.           £¨°´ÈÎÒâ¼ü¹Ø±Õ´Ë´°¿Ú£©
+ECHO.           ï¼ˆæŒ‰ä»»æ„é”®å…³é—­æ­¤çª—å£ï¼‰
 ECHO.***********************************************
 ECHO.
 fastboot.exe reboot
